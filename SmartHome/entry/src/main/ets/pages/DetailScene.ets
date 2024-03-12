@@ -1,7 +1,6 @@
 @Entry
 @Component
 struct DetailScene {
-  @State message: string = 'Hello World'
 
   build() {
     Column() {
