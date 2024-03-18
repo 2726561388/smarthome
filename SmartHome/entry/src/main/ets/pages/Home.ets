@@ -265,7 +265,124 @@ struct Home {
 
 
           //个人主页
-          TabContent()
+          TabContent(){
+            Scroll(){
+              Column(){
+                Row(){
+                  Image($r('app.media.account'))
+                    .width("50")
+                    .height("50")
+                    .margin({left:30})
+                  Text("18779695809")
+                    .fontSize("20")
+                    .margin({left:30})
+                  Image($r('app.media.right'))
+                    .width("20")
+                    .height("20")
+                    .margin({left:70})
+                }
+                .width("100%")
+                .height("40")
+                .margin({top:0})
+
+                Row(){
+                  Image($r('app.media.wifi'))
+                    .width("30")
+                    .height("30")
+                    .margin({left:20})
+                  Text("网关管理")
+                    .width("80")
+                    .height("20")
+                    .margin({left:10})
+
+                  Divider()
+                    .strokeWidth(2)
+                    .vertical(true)
+                    .height("50%")
+                    .margin({left:30,right:30})
+
+                  Image($r('app.media.familyManage'))
+                    .width("30")
+                    .height("30")
+                    .margin({left:10})
+                  Text("家庭管理")
+                    .width("80")
+                    .height("20")
+                    .margin({left:10})
+                }.width("95%")
+                .height("60")
+                .margin({top:50})
+                .backgroundColor("#ffffff")
+                .borderRadius(10)
+
+                Column(){
+                  Row({space:150}) {
+                    Text("ezhome云云对接")
+                      .fontSize(20)
+                    Image($r('app.media.right'))
+                      .width("20")
+                      .height("20")
+                  }
+                  .margin({top:15})
+                  .height("20")
+                  List(){
+                    ListItem(){
+                      Column(){
+                        Image($r('app.media.huawei'))
+                          .width("40")
+                          .height("40")
+                          .margin({top:20,bottom:20,left:20,right:20})
+                        Text("华为智慧生活")
+                          .fontSize(15)
+                      }
+                    }
+                    ListItem(){
+                      Column(){
+                        Image($r('app.media.baidu'))
+                          .width("40")
+                          .height("40")
+                          .margin({top:20,bottom:20,left:20,right:20})
+                        Text("小度小度")
+                          .fontSize(15)
+                      }
+                    }
+                    ListItem(){
+                      Column(){
+                        Image($r('app.media.mi'))
+                          .width("40")
+                          .height("40")
+                          .margin({top:20,bottom:20,left:20,right:20})
+                        Text("米家小爱")
+                          .fontSize(15)
+                      }
+                    }
+                    ListItem(){
+                      Column(){
+                        Image($r('app.media.TianMao'))
+                          .width("40")
+                          .height("40")
+                          .margin({top:20,bottom:20,left:20,right:20})
+                        Text("天猫精灵")
+                          .fontSize(15)
+                      }
+                    }
+                  }
+                  .listDirection(Axis.Horizontal)
+                  .width("95%")
+                }
+                .width("95%")
+                .height("150")
+                .backgroundColor("#ffffff")
+                .margin({top:20})
+                .borderRadius(10)
+              }.width("100%")
+
+            }.width("100%")
+            .edgeEffect(EdgeEffect.Spring)
+            .scrollBar(BarState.On)
+            .height("100%")
+            .backgroundColor("#ffe3e0e0")
+          }
             .tabBar({ icon: $r('app.media.mine'), text: "我的" })
 
 
