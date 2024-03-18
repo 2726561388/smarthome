@@ -246,7 +246,7 @@ struct Home {
                 }
                 .width("100%")
                 .edgeEffect(EdgeEffect.Spring)
-                .scrollBar(BarState.On)
+                .scrollBar(BarState.Off)
                 .height("100%")
                 .scrollBarColor("#ff000000")
 
@@ -268,6 +268,7 @@ struct Home {
           TabContent(){
             Scroll(){
               Column(){
+                Blank().height("50")
                 Row(){
                   Image($r('app.media.account'))
                     .width("50")
@@ -368,6 +369,7 @@ struct Home {
                     }
                   }
                   .listDirection(Axis.Horizontal)
+                  .scrollBar(BarState.Off)
                   .width("95%")
                 }
                 .width("95%")
@@ -375,11 +377,170 @@ struct Home {
                 .backgroundColor("#ffffff")
                 .margin({top:20})
                 .borderRadius(10)
+
+                Column(){
+                  List(){
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.code'))
+                          .width("20")
+                          .height("20")
+                        Text("我的二维码")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.wechat'))
+                          .width("20")
+                          .height("20")
+                        Text("微信小程序")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.video'))
+                          .width("20")
+                          .height("20")
+                        Text("视频学院")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.message'))
+                          .width("20")
+                          .height("20")
+                        Text("消息中心")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.idea'))
+                          .width("20")
+                          .height("20")
+                        Text("意见反馈")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.help'))
+                          .width("20")
+                          .height("20")
+                        Text("帮助中心")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                  }
+                  .divider({strokeWidth:2,startMargin:50,endMargin:10,color:'#ffc1c1c1'})
+                }.backgroundColor("#ffffff")
+                .width("95%")
+                .height("310")
+                .borderRadius(10)
+                .margin({top:20})
+
+                Column(){
+                  List(){
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.hide'))
+                          .width("20")
+                          .height("20")
+                        Text("隐藏设备")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.change_account'))
+                          .width("20")
+                          .height("20")
+                        Text("账号切换")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                    ListItem(){
+                      Row(){
+                        Image($r('app.media.help'))
+                          .width("20")
+                          .height("20")
+                        Text("关于我们")
+                          .width("80")
+                          .margin({left:10})
+                        Image($r('app.media.right'))
+                          .width("20")
+                          .height("20")
+                          .margin({left:180})
+                      }.margin({top:15,left:20,bottom:15})
+                      .width("100%")
+                    }
+                  }
+                  .divider({strokeWidth:2,startMargin:50,endMargin:10,color:'#ffc1c1c1'})
+                }.backgroundColor("#ffffff")
+                .width("95%")
+                .height("155")
+                .borderRadius(10)
+                .margin({top:20})
+
+                Blank()
+                  .height("50")
+
               }.width("100%")
 
             }.width("100%")
             .edgeEffect(EdgeEffect.Spring)
-            .scrollBar(BarState.On)
+            .scrollBar(BarState.Off)
             .height("100%")
             .backgroundColor("#ffe3e0e0")
           }
