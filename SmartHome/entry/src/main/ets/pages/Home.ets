@@ -1,9 +1,11 @@
-
 import router from '@ohos.router'
-
+import web_webview from '@ohos.web.webview';
 @Entry
 @Component
 struct Home {
+  webviewController: web_webview.WebviewController = new web_webview.WebviewController();
+
+
 
   build() {
     Column() {
@@ -167,6 +169,11 @@ struct Home {
                       .height("150vp")
                       .borderRadius("20vp")
                       .margin({ top: "10vp" })
+                      .onClick(()=>{
+                        router.pushUrl({
+                          url:'pages/detailScene2'
+                        })
+                      })
                     Row() {
                       Text("下班模式")
                         .width("70%")
@@ -181,6 +188,11 @@ struct Home {
                         .margin({ left: "5vp" })
                         .fontSize("20fp")
                     }
+                    .onClick(()=> {
+                      router.pushUrl({
+                        url: 'pages/detailScene2'
+                      })
+                    })
                     .width("95%")
                     .height("40vp")
                     .borderRadius("10vp")
@@ -192,6 +204,11 @@ struct Home {
                       .height("150vp")
                       .borderRadius("20vp")
                       .margin({ top: "10vp" })
+                      .onClick(()=>{
+                        router.pushUrl({
+                          url:'pages/detailScene3'
+                        })
+                      })
                     Row() {
                       Text("休闲模式")
                         .width("70%")
@@ -206,6 +223,11 @@ struct Home {
                         .margin({ left: "5vp" })
                         .fontSize("20fp")
                     }
+                    .onClick(()=>{
+                      router.pushUrl({
+                        url:'pages/detailScene3'
+                      })
+                    })
                     .width("95%")
                     .height("40vp")
                     .borderRadius("10vp")
@@ -217,6 +239,11 @@ struct Home {
                       .height("150vp")
                       .borderRadius("20vp")
                       .margin({ top: "10vp" })
+                      .onClick(()=>{
+                        router.pushUrl({
+                          url:'pages/detailScene4'
+                        })
+                      })
                     Row() {
                       Text("睡眠模式")
                         .width("70%")
@@ -231,6 +258,11 @@ struct Home {
                         .margin({ left: "5vp" })
                         .fontSize("20fp")
                     }
+                    .onClick(()=>{
+                      router.pushUrl({
+                        url:'pages/detailScene4'
+                      })
+                    })
                     .width("95%")
                     .height("40vp")
                     .borderRadius("10vp")
@@ -260,9 +292,17 @@ struct Home {
 
 
           //商城页面
-          TabContent()
-            .tabBar({ icon: $r('app.media.shopping'), text: "商城" })
+          TabContent(){
+            Column(){
+                  Web({src:'https://baidu.com',controller:this.webviewController})
+                    .zoomAccess(true)
+              .height('100%')
+            }.width("100%")
+            .height("100%")
 
+          }
+            .tabBar({ icon: $r('app.media.shopping'), text: "商城" })
+          //https://s.taobao.com/search?commend=all&ie=utf8&initiative_id=tbindexz_20170306&page=1&q=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85&search_type=item&sourceId=tb.index&spm=a21bo.jianhua.201856-taobao-item.2&ssid=s5-e&tab=all
 
           //个人主页
           TabContent(){
@@ -545,8 +585,6 @@ struct Home {
             .backgroundColor("#ffe3e0e0")
           }
             .tabBar({ icon: $r('app.media.mine'), text: "我的" })
-
-
 
         }
         .width("100%")

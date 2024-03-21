@@ -1,6 +1,11 @@
 {
   "src": [
     "pages/Home",
-    "pages/DetailScene"
+    "pages/DetailScene",
+    "pages/TaoBao",
+    "pages/detailScene2",
+    "pages/detailScene3",
+    "pages/detailScene4",
+    "pages/selfInfo"
   ]
 }
